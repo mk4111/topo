@@ -16,6 +16,7 @@
 (3) Display the *average elevation* for each segment.
 
 Extra:
+
 (4) Graph the **delta** of the two road gradients.
 
 (5) Graph additional, interesting comparative info between the two roads.
