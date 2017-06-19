@@ -9,13 +9,17 @@
     - Setup Express and mySQL --> how to architect data?
     - Make simple HTTP requests.
     - Create methods library for each SQL command to withdraw required data. 
+
 (2) Display the *gradients* for each of the SEGMENTS over the length of each ROAD.
   - [ ] Current idea: `onhover` over a segment, display average gradient for that segment (highest - lowest elev/segment length).
+
 (3) Display the *average elevation* for each segment.
 
 Extra:
 (4) Graph the **delta** of the two road gradients.
+
 (5) Graph additional, interesting comparative info between the two roads.
+
 (6) Plot a polyline of the two Roads on a Google Map via Google Maps API.
 
 ## Stack Choice:
