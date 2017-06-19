@@ -1,5 +1,34 @@
 # Topo
 
+## Objectives:
+(1) Graph each ROAD. (2 roads)
+  - [ ] Setup graphing library
+  - [ ] For each road, extract segment length and elevation data from .CSV into arrays.
+  - [ ] Display graph where x=road length (incorporates segment data), y=elevation at beginning and end of each segment.
+  - [ ] Once graph for one road displays, move data into mySQL database.
+    - Setup Express and mySQL --> how to architect data?
+    - Make simple HTTP requests.
+    - Create methods library for each SQL command to withdraw required data. 
+(2) Display the *gradients* for each of the SEGMENTS over the length of each ROAD.
+  - [ ] Current idea: `onhover` over a segment, display average gradient for that segment (highest - lowest elev/segment length).
+(3) Display the *average elevation* for each segment.
+
+Extra:
+(4) Graph the **delta** of the two road gradients.
+(5) Graph additional, interesting comparative info between the two roads.
+(6) Plot a polyline of the two Roads on a Google Map via Google Maps API.
+
+## Stack Choice:
+- Angular (as required)
+- Express
+  - Quick and easy to prototype with
+- HighCharts (https://github.com/gevgeny/angular2-highcharts)
+  - Chosen for its popularity (Top 3 in http://www.angularjs4u.com/angularjs2/top-20-angular-2-charts-graphs/)
+  - Simple and easy to get going with. Note: Had a quick play with [nvD3](https://github.com/krispo/angular-nvd3) but the documentation wasn't up-to-date and found it difficult to integrate with the 'new' Angular. 
+- MySQL (for bonus points)
+
+***
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.2.
 
 ## Development server
