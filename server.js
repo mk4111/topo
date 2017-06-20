@@ -21,4 +21,4 @@ app.get('*', (req, res) => {
 app.set('port', port);
 
 
-server.listen(port, () => console.log(`API running on localhost:${port}`));
+server.listen(port, () => console.log(`server running on localhost:${port}`));
