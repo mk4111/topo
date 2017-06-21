@@ -44,8 +44,6 @@ Create a new file and name it `.env`. Save this file to the root of this applica
 - Open `server/db/lib/init.sql`; copy and paste the text into your mysql command line to create an instance of a table called 'road'. If run correctly, you should get a response that says:
 ```shell
 Query OK, 0 rows affected (0.04 sec)
-```
-- Now open `server/db/lib/inject_data.sql`; copy and paste the entirety of this file too, and run in the mysql cli. A similar response to that above should be received.
 
 (5) Now open another terminal, and run `npm run start` to get the app running. Once you see `server running on localhost:3000`, open a browser and go to `localhost:3000`. The app is now ready.
 
