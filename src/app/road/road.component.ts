@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { RoadService } from '../road.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { RoadService } from '../road.service';
 })
 
 export class RoadComponent implements OnInit {
-  private roadId: string = '1002735';
+  @Input() roadId: string;
   private options: Object;
 
   constructor( private roadService: RoadService ) { }
