@@ -11,7 +11,7 @@
     - Create methods library for each SQL command to withdraw required data. 
 
 (2) Display the *gradients* for each of the SEGMENTS over the length of each ROAD.
-  - [ ] Current idea: `onhover` over a segment, display average gradient for that segment (highest - lowest elev/segment length).
+  - [x] Current idea: `onhover` over a segment, display gradient for that segment.
 
 (3) Display the *average elevation* for each segment.
 
