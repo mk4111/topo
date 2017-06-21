@@ -2,6 +2,8 @@
   {{title}}
 </h1>
 
-<road></road>
+<road *ngFor="let roadId of roadIds"
+  [roadId]="roadId">
+</road>
 
 <router-outlet></router-outlet>

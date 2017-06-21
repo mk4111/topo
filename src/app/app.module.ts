@@ -44,6 +44,6 @@ export function highchartsFactory() {
      useFactory: highchartsFactory
    }
  ],
- bootstrap: [AppComponent, RoadComponent]
+ bootstrap: [AppComponent]
 })
 export class AppModule { }

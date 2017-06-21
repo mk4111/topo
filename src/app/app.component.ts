@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = "Graphing Roads"
+  private title: string = "Graphing Roads";
+  private roadIds: any = ['1002735', '1020376'];
 }
