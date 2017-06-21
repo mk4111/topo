@@ -8,7 +8,14 @@ router.get('/', (req, res) => {
 });
 
 router.get('/all-roads', (req, res) => {
-  // use promises or cb to return data from database
+  console.log('/all-roads API');
+  sqlQuery.getAllRoads(function(err, rows) {
+    if (err) {
+      res.json(err);
+    };
+
+    res.json(rows);
+  });
 });
 
 router.get('/road/:roadId', (req, res) => {

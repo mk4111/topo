@@ -2,10 +2,10 @@
   {{title}}
 </h1>
 
-<all-roads></all-roads>
-
 <road *ngFor="let roadId of roadIds"
   [roadId]="roadId">
 </road>
+
+<all-roads></all-roads>
 
 <router-outlet></router-outlet>

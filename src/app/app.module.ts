@@ -10,7 +10,7 @@ import * as highcharts from 'highcharts';
 
 import { AppComponent } from './app.component';
 import { RoadComponent } from './road/road.component';
-import { AllRoadsComponent} from './road/all-roads.component';
+import { AllRoadsComponent} from './all-roads/all-roads.component';
 import { RoadService } from './road.service';
 
 const ROUTES = [
