@@ -28,7 +28,8 @@ const queries = {};
 const stringToFloat = (data) => data.map((el) => {
   return {
     len: parseFloat(el.len),
-    elev: parseFloat(el.elev)
+    elev: parseFloat(el.elev),
+    gradient: parseFloat(el.gradient)
   }
 });
 
@@ -36,11 +37,15 @@ const getCumulativeLength = (data) => data.map((el, i, arr) => {
   const cLen = i === 0 ? data[i].len : arr.slice(0, i+1)
                                           .map((el) => el.len)
                                           .reduce((total, cur) => total + cur);
-  return [cLen, el.elev];
+  return {
+    x: cLen,
+    y: el.elev,
+    gradient: el.gradient
+  };
 });
 
 queries.getRoad = (roadId, callback) => {
-  let q = `SELECT segment_length AS len, end_elevation AS elev FROM road WHERE road_group_id = ${roadId}`;
+  let q = `SELECT segment_length AS len, end_elevation AS elev, gradient FROM road WHERE road_group_id = ${roadId}`;
   return db.query(q, (err, data) => {
     var formatted = getCumulativeLength(stringToFloat(data));
     callback(err, formatted);

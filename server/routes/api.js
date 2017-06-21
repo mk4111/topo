@@ -1,7 +1,5 @@
 const express = require('express');
 const sqlQuery = require('../db/index.js');
-const road1 = require('../road1.js');
-const road2 = require('../road2.js');
 
 const router = express.Router();
 
