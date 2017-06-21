@@ -1,3 +1,7 @@
-chart {
-  display: block;
+.container--extra-padding {
+  padding: 2rem;
+}
+
+.card-title--center {
+  text-align: center;
 }
