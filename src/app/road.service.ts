@@ -12,6 +12,6 @@ export class RoadService {
   }
 
   public getRoad( roadId: string ) {
-    return this.http.get('/api/road/' + roadId).map(res => res.json());
+    return this.http.get(`/api/road/${roadId}`).map(res => res.json());
   }
 }
