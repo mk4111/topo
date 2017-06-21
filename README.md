@@ -5,7 +5,7 @@
   - [x] Setup graphing library
   - [x] For each road, extract segment length and elevation data from .CSV into arrays.
   - [x] Display graph where x=road length (incorporates segment data), y=elevation at beginning and end of each segment.
-  - [ ] Once graph for one road displays, move data into mySQL database.
+  - [x] Once graph for one road displays, move data into mySQL database.
     - Setup Express and mySQL --> how to architect data?
     - Make simple HTTP requests.
     - Create methods library for each SQL command to withdraw required data. 
