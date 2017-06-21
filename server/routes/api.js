@@ -8,7 +8,6 @@ router.get('/', (req, res) => {
 });
 
 router.get('/all-roads', (req, res) => {
-  console.log('/all-roads API');
   sqlQuery.getAllRoads(function(err, rows) {
     if (err) {
       res.json(err);
