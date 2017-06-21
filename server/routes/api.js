@@ -1,6 +1,5 @@
 const express = require('express');
-const road1 = require('../road1.js');
-const road2 = require('../road2.js');
+const sqlQuery = require('../db/index.js');
 
 const router = express.Router();
 
@@ -14,19 +13,16 @@ router.get('/all-roads', (req, res) => {
 
 router.get('/road/:roadId', (req, res) => {
   var roadId = req.params.roadId;
-  // use promises or cb to return data from database
-  switch (roadId) {
-    case '1002735':
-      res.json(road1);
-      break;
-    case '1020376':
-      res.json(road2);
-      break;
-
-    default:
-      res.send('No data found');
-
+  if (!roadId) {
+    res.json([]);
   }
+  sqlQuery.getRoad(roadId, function(err, rows) {
+    if (err) {
+      res.json(err);
+    };
+
+    res.json(rows);
+  });
 });
 
 

@@ -15,15 +15,20 @@ export class RoadComponent implements OnInit {
 
   ngOnInit() {
     this.roadService.getRoad( this.roadId ).subscribe(roadData => {
-        this.options = {
-          title : { text : 'Routes' },
-          xAxis: { title: { text: 'ROUTE LENGTH (km)' } },
-          yAxis: { title: { text: 'ELEVATION (m)' } },
-          series: [{
-              name: 'Road 1',
-              data: roadData
-          }]
-        };
+      this.options = {
+        title : { text : 'Cycling Routes' },
+        xAxis: { title: { text: 'ROUTE LENGTH (km)' } },
+        yAxis: { title: { text: 'ELEVATION (m)' } },
+        series: [{
+          name: `Road ID: ${ this.roadId }`,
+          data: roadData,
+        }],
+        tooltip: {
+            formatter: function () {
+                return 'Extra data: <b>' + this.point.gradient + '</b>';
+            }
+        },
+      };
     });
   };
 }
