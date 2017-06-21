@@ -1,11 +1,24 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container container--extra-padding">
+  <h1 class="card-title card-title--center">
+    {{title}}
+  </h1>
+</div>
 
-<road *ngFor="let roadId of roadIds"
-  [roadId]="roadId">
-</road>
+<div class="container container--extra-padding">
+  <h4 class="card-title card-title--center">{{ indivRoad }}</h4>
+  <div class="row" *ngFor="let roadId of roadIds">
+    <div class="card card-block">
+      <road [roadId]="roadId">
+      </road>
+    </div>
+  </div>
+</div>
 
-<all-roads></all-roads>
+<div class="container container--extra-padding">
+  <h4 class="card-title card-title--center">{{ allRoads }}</h4>
+    <div class="card card-block">
+      <all-roads></all-roads>
+    </div>
+</div>
 
 <router-outlet></router-outlet>
